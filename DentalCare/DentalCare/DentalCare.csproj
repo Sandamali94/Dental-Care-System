@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56618FB8-FB80-4414-9EA5-209527934E5C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DentalCare</RootNamespace>
+    <AssemblyName>DentalCare</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\..\repviewe\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUserAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUserAccounts.Designer.cs">
+      <DependentUpon>CreateUserAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUser.cs" />
+    <Compile Include="CreateUsersDBOpe.cs" />
+    <Compile Include="DoctorDBOper.cs" />
+    <Compile Include="DoctorRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorRegistration.Designer.cs">
+      <DependentUpon>DoctorRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontOffice.cs" />
+    <Compile Include="FrontOfficeDBOper.cs" />
+    <Compile Include="FrontOfficeRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontOfficeRegistration.Designer.cs">
+      <DependentUpon>FrontOfficeRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontOfficerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontOfficerMenu.Designer.cs">
+      <DependentUpon>FrontOfficerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="Doctor.cs" />
+    <Compile Include="DoctorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorMenu.Designer.cs">
+      <DependentUpon>DoctorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Income.cs">
+      <DependentUpon>Income.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Income.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Income.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncomeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Incomereportd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incomereportd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InvoiceRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceRegistration.Designer.cs">
+      <DependentUpon>InvoiceRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfExperiencedDoctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListOfExperiencedDoctors.Designer.cs">
+      <DependentUpon>ListOfExperiencedDoctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginDBOpert.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="ManagerDBOper.cs" />
+    <Compile Include="ManagerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerMenu.Designer.cs">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerRegistration.Designer.cs">
+      <DependentUpon>ManagerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs" />
+    <Compile Include="PatientDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatientDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDBOper.cs" />
+    <Compile Include="Pay.cs" />
+    <Compile Include="PaymentDBOpera.cs" />
+    <Compile Include="RegistrationFeeInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationFeeInvoice.Designer.cs">
+      <DependentUpon>RegistrationFeeInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistrationInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreatmentData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreatmentData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TreatmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreatmentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TreatmentInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreatmentInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewAppoint.cs" />
+    <Compile Include="ViewDailyApointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDailyApointments.Designer.cs">
+      <DependentUpon>ViewDailyApointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomeReport.Designer.cs">
+      <DependentUpon>IncomeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientEnquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientEnquiry.Designer.cs">
+      <DependentUpon>PatientEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientRegistration.Designer.cs">
+      <DependentUpon>PatientRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments.Designer.cs">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewDailyAppoiDBOper.cs" />
+    <EmbeddedResource Include="AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUserAccounts.resx">
+      <DependentUpon>CreateUserAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorMenu.resx">
+      <DependentUpon>DoctorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorRegistration.resx">
+      <DependentUpon>DoctorRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontOfficeRegistration.resx">
+      <DependentUpon>FrontOfficeRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontOfficerMenu.resx">
+      <DependentUpon>FrontOfficerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Incomereportd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Incomereportd.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceRegistration.resx">
+      <DependentUpon>InvoiceRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListOfExperiencedDoctors.resx">
+      <DependentUpon>ListOfExperiencedDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerMenu.resx">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerRegistration.resx">
+      <DependentUpon>ManagerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationFeeInvoice.resx">
+      <DependentUpon>RegistrationFeeInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RegistrationInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreatmentInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TreatmentInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDailyApointments.resx">
+      <DependentUpon>ViewDailyApointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomeReport.resx">
+      <DependentUpon>IncomeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientEnquiry.resx">
+      <DependentUpon>PatientEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientRegistration.resx">
+      <DependentUpon>PatientRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments.resx">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Income.xsc">
+      <DependentUpon>Income.xsd</DependentUpon>
+    </None>
+    <None Include="Income.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Income.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Income.xss">
+      <DependentUpon>Income.xsd</DependentUpon>
+    </None>
+    <None Include="IncomeDataSet.xsc">
+      <DependentUpon>IncomeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IncomeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncomeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IncomeDataSet.xss">
+      <DependentUpon>IncomeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PatientDataSet.xsc">
+      <DependentUpon>PatientDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PatientDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PatientDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PatientDataSet.xss">
+      <DependentUpon>PatientDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TreatmentData.xsc">
+      <DependentUpon>TreatmentData.xsd</DependentUpon>
+    </None>
+    <None Include="TreatmentData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TreatmentData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TreatmentData.xss">
+      <DependentUpon>TreatmentData.xsd</DependentUpon>
+    </None>
+    <None Include="TreatmentDataSet.xsc">
+      <DependentUpon>TreatmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TreatmentDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TreatmentDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TreatmentDataSet.xss">
+      <DependentUpon>TreatmentDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AllBackgroundnew.jpg" />
+    <None Include="Resources\submit.jpg" />
+    <None Include="Resources\cleark.jpg" />
+    <None Include="Resources\doctpr.jpg" />
+    <None Include="Resources\manager.jpg" />
+    <None Include="Resources\Menu.jpg" />
+    <None Include="Resources\mainbackground1.jpg" />
+    <None Include="Resources\logbackground.jpg" />
+    <None Include="Resources\AllBackgroundnew.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
